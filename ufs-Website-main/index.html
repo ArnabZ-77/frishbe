@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Frisbee Society | IIT Kanpur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header class="ufs-navbar">
+  <div class="ufs-logo-title">
+    <img src="images/logos/logo.jpg" alt="UFS Logo" class="ufs-logo" />
+    <span class="ufs-title">ULTIMATE FRISBEE SOCIETY</span>
+  </div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+  <!-- 🔽 Added hamburger toggle button -->
+  <button class="nav-toggle" onclick="toggleNav()">☰</button>
+
+  <nav class="ufs-nav">
+    <ul class="ufs-nav-links" id="ufsNavLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rules.html">How to Play</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="team.html">Leaders</a></li>
+      <li><a href="interview.html">UFS Secy Interview</a></li>
+    </ul>
+  </nav>
+</header>
+  <section id="home" class="home-section">
+  <h2>🥏 Welcome to UFS!</h2>
+  <p>Run. Jump. Throw. Dive. Bond. Repeat.
+UFS is not just a sports society — it's a community, a vibe, and your weekend escape. Whether you're a total beginner or a seasoned thrower, we’ve got a place for you. We’re IIT Kanpur’s home for all things frisbee — from thrilling Ultimate matches to chill night games under the stars.
+</p>
+</section>
+<section id="about" class="page-section">
+  <h2>About UFS</h2>
+  <p>
+    💭 "Wait... frisbee? Isn’t that just tossing a disc around?"
+Not even close.
+Ultimate Frisbee is a full-fledged team sport with tactics, spirit, speed, and insane energy. Once you play it — you’ll know.
+  </p>
+  <h2>🌟 What We Offer</h2>
+  <ul>
+  <li><strong>🏕️ Beginner-Friendly:</strong> Fun camps to build confidence.</li>
+  <li><strong>🧠 Skill Sessions:</strong> Learn throws, tactics, and team play.</li>
+  <li>
+    <strong>🎯 Gameplay Variety:</strong>
+    <ul>
+      <h4>Ultimate Frisbee – fast-paced action</h4>
+      <h4>Beach Frisbee – sand + thrill</h4>
+      <h4>Night Frisbee – glow-in-the-dark madness</h4>
+      <h4>Weekend Vibes – chill hangouts</h4>
+      <h4>Match Screenings – yes, we watch too!</h4>
+    </ul>
+  </li>
+</ul>
+
+  <h2>🧍‍♀️🧍‍♂️ Who Can Join?</h2>
+  <p>Anyone at IIT Kanpur — UG, PG, PhD, fresher or senior — with zero experience needed!</p>
+
+  <h2>📍 Where You’ll Find Us</h2>
+  <p>Mainly at the Hockey Ground — sometimes Hall 13, 4, or 10. Look for flying discs after dark!</p>
+
+  <h2>🤝 Why UFS?</h2>
+  <ul>
+    <li>✅ Mixed-gender, inclusive play</li>
+    <li>✅ Fitness + Fun + Friendship</li>
+    <li>✅ No experience required — just show up</li>
+  </ul>
+
+  <h2>🎉 Join the UFS Family</h2>
+  <p>Whether you’re here to compete or just chill — we’ve got a spot for you. Come for the throws, stay for the people.</p>
+</section>
+<section class="contact-section">
+  <h2>Meet Our Leaders</h2>
+  <div class="contact-cards">
+    <div class="contact-card">
+      <img src="images/team/yajat.jpeg" alt="Yajat Parikh" />
+      <h3>Yajat Parikh</h3>
+      <p class="desc">Leader<br>📞 +91 63525 58102</p>
+    </div>
+    <div class="contact-card">
+      <img src="images/team/rohan.jpeg" alt="Rohan Kumar" />
+      <h3>Rohan Kumar</h3>
+      <p class="desc">Leader<br>📞 +91 95996 54997</p>
+    </div>
+    <div class="contact-card">
+      <img src="images/team/saikiran.jpg" alt="Saikiran Banoth" />
+      <h3>Saikiran Banoth</h3>
+      <p class="desc">Leader<br>📞 +91 86886 01677</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>
+    <img src="images/logos/instagram.png" alt="Instagram" class="icon">
+    <a href="https://www.instagram.com/ultimatefrisbee_iitk/" target="_blank">Follow us on Instagram</a> for updates!
+  </p>
+</div>
+  <script>
+function toggleNav() {
+  document.getElementById("ufsNavLinks").classList.toggle("show");
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('light-theme');
+  localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+}
+
+// Load saved theme on startup
+window.onload = () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+  }
+};
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
